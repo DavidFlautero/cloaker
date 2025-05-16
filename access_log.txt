@@ -1,0 +1,10 @@
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 | 2025-02-14 00:09:15 | Directo | Ninguna | /myadminconfig/
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 | 2025-02-14 00:09:17 | Directo | Ninguna | /myadminconfig/
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 | 2025-02-14 00:13:35 | Directo | Ninguna | /myadminconfig/
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 | 2025-02-14 00:13:46 | Directo | Ninguna | /myadminconfig/
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 | 2025-02-14 00:15:18 | Directo | Ninguna | /myadminconfig/
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | 2025-05-16 16:24:17 | Directo | Ninguna | /myadminconfig/ | Desconocido | Desconocido | No | desktop | chrome
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | 2025-05-16 16:24:26 | Directo | Ninguna | /myadminconfig/ | Desconocido | Desconocido | No | desktop | chrome
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | 2025-05-16 16:32:24 | Directo | Ninguna | /myadminconfig/?route=home | Desconocido | Desconocido | No | desktop | chrome
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | 2025-05-16 16:32:58 | Directo | Ninguna | /myadminconfig/?route=home | Desconocido | Desconocido | No | desktop | chrome
+::1 | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 | 2025-05-16 16:33:54 | Directo | Ninguna | /myadminconfig/?utm_source=google&utm_campaign=promo&utm_term=homeme | Desconocido | Desconocido | No | desktop | chrome

@@ -1,0 +1,257 @@
+/* galaxia.css */
+
+/* Fondo de galaxia */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff; /* Texto blanco para contrastar con el fondo oscuro */
+    background-image: url('assets/galaxia.jpg'); /* Ruta a tu imagen de galaxia */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fondo fijo al desplazarse */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el contenido */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos */
+h1, h2 {
+    color: #ffffff; /* Texto blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+}
+
+/* Enlaces */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Líneas semi-transparentes */
+    color: #ffffff; /* Texto blanco */
+}
+
+th {
+    background-color: rgba(52, 152, 219, 0.8); /* Fondo semi-transparente para encabezados */
+    color: #ffffff;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto hover semi-transparente */
+}
+
+/* Formularios */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff; /* Texto blanco */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="url"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    color: #ffffff; /* Texto blanco */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Mensajes de éxito/error */
+.message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.message.success {
+    background-color: rgba(212, 237, 218, 0.8); /* Fondo semi-transparente */
+    color: #155724;
+}
+
+.message.error {
+    background-color: rgba(248, 215, 218, 0.8); /* Fondo semi-transparente */
+    color: #721c24;
+}
+
+/* Estilos para la lista de IPs bloqueadas */
+ol {
+    padding-left: 20px;
+    color: #ffffff; /* Texto blanco */
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el mensaje "No hay IPs bloqueadas" */
+p {
+    color: #ffffff; /* Texto blanco */
+    font-style: italic;
+}
+
+/* Botones de acción */
+.action-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.action-button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="url"],
+    select {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Estilos para el switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Ocultar el checkbox original */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo del slider (fondo del switch) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* Estilo del círculo deslizante */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Cambiar el fondo cuando el switch está activado */
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+/* Mover el círculo deslizante cuando el switch está activado */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Estilos para la luna y el sol */
+.moon, .sun {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+.moon {
+    left: 5px;
+    opacity: 1;
+}
+
+.sun {
+    right: 5px;
+    opacity: 0;
+}
+
+/* Mostrar el sol cuando el switch está activado */
+input:checked + .slider .moon {
+    opacity: 0;
+}
+
+input:checked + .slider .sun {
+    opacity: 1;
+}

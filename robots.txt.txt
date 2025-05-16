@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /redireccion/
+Disallow: /admin/
+Disallow: /configuracion/
+Disallow: /registro_ip/
+Disallow: /includes/
+Disallow: /data/
