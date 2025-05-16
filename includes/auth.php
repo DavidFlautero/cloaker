@@ -1,43 +1,41 @@
 <?php
 // includes/auth.php
 
-session_start();
+// Database connection (using PDO for security)
+function get_db_connection() {
+    $dsn = 'mysql:host=localhost;dbname=your_database;charset=utf8mb4';
+    $username = 'your_username';
+    $password = 'your_password';
+    try {
+        $pdo = new PDO($dsn, $username, $password, [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false,
+        ]);
+        return $pdo;
+    } catch (PDOException $e) {
+        die("Connection failed: " . $e->getMessage());
+    }
+}
 
-// Credenciales de usuario (en un entorno real, usa una base de datos)
-$usuarios = [
-    'admin' => password_hash('Alucard33', PASSWORD_BCRYPT)
-];
-
-/**
- * Verifica las credenciales de inicio de sesión.
- *
- * @param string $usuario El nombre de usuario.
- * @param string $contrasena La contraseña.
- * @return bool True si las credenciales son válidas, False en caso contrario.
- */
+// Verify login credentials
 function verificar_login($usuario, $contrasena) {
-    global $usuarios;
-    if (isset($usuarios[$usuario]) && password_verify($contrasena, $usuarios[$usuario])) {
-        $_SESSION['usuario'] = $usuario;
+    $pdo = get_db_connection();
+    $stmt = $pdo->prepare('SELECT password FROM users WHERE username = ?');
+    $stmt->execute([$usuario]);
+    $user = $stmt->fetch();
+
+    if ($user && password_verify($contrasena, $user['password'])) {
         return true;
     }
     return false;
 }
 
-/**
- * Verifica si el usuario está autenticado.
- *
- * @return bool True si el usuario está autenticado, False en caso contrario.
- */
-function esta_autenticado() {
-    return isset($_SESSION['usuario']);
+// Store remember me token
+function store_remember_token($usuario, $token) {
+    $pdo = get_db_connection();
+    $hashed_token = password_hash($token, PASSWORD_DEFAULT);
+    $stmt = $pdo->prepare('UPDATE users SET remember_token = ? WHERE username = ?');
+    $stmt->execute([$hashed_token, $usuario]);
 }
-
-/**
- * Cierra la sesión del usuario.
- */
-function cerrar_sesion() {
-    session_destroy();
-    header('Location: login.php');
-    exit;
-}
+?>
